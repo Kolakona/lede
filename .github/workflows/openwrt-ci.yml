@@ -10,14 +10,13 @@
 name: OpenWrt-CI
 
 on:
-  push:
-    branches: 
-      - CI-master
-  #     ↑↑↑ 改成你的分支名, 一般是master
   schedule:
     - cron: 0 20 * * *
   release:
     types: [published]
+  push:
+    branches: 
+      - master
 
 jobs:
   build:
